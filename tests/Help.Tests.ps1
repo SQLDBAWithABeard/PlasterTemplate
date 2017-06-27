@@ -13,7 +13,7 @@
 #>
 
 $ModuleBase = Split-Path -Parent $MyInvocation.MyCommand.Path
-. "$ModuleBase\InModule.Help.Exceptions.ps1"
+. "$ModuleBase\Help.Exceptions.ps1"
 
 # For tests in .\Tests subdirectory
 if ((Split-Path $ModuleBase -Leaf) -eq 'Tests') {
