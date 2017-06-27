@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plasterManifest
+  schemaVersion="1.0" xmlns="http://www.microsoft.com/schemas/PowerShell/Plaster/v1">
+  <metadata>
+    <name>FullModuleTemplate</name>
+    <id>d9df301f-04f5-48e8-aae4-320e50174f55</id>
+    <version>0.0.1</version>
+    <title>Full Module Template</title>
+    <description></description>
+    <author>Rob Sewell</author>
+    <tags></tags>
+  </metadata>
+  <parameters>
+    <parameter name="FullName" type="text" prompt="Module author's name" />
+    <parameter name="ModuleName" type="text" prompt="Name of your module" />
+    <parameter name="ModuleDesc" type="text" prompt="Brief description on this module" />
+    <parameter name="Version" type="text" prompt="Initial module version" default="0.0.1" />
+    <parameter name="GitHubUserName" type="text" prompt="GitHub username" default="${PLASTER_PARAM_FullName}"/>
+    <parameter name="GitHubRepo" type="text" prompt="Github repo name for this module" default="${PLASTER_PARAM_ModuleName}"/>
+</parameters>
+  <content>
+      <message>
+    Creating folder structure
+    </message>
+    <file source='' destination='docs'/>
+    <file source='' destination='functions'/>
+    <file source='' destination='internal'/>
+    <file source='' destination='tests'/>
+    <message>
+    Deploying common files
+    </message>
+    <file source='appveyor.yml' destination=''/>
+    <file source='contributing.md' destination=''/>
+    <file source='LICENSE.txt'  destination=''/>
+    <templateFile source='install.md'   destination=''/>
+    <templateFile source='readme.md'   destination=''/>
+    <templateFile source='tests\Project.Tests.ps1' destination=''/>
+    <templateFile source='tests\Help.Tests.ps1' destination=''/>
+    <templateFile source='tests\Feature.Tests.ps1' destination=''/>
+    <templateFile source='tests\Regression.Tests.ps1' destination=''/>
+    <templateFile source='tests\Unit.Tests.ps1' destination=''/>
+    <templateFile source='tests\Help.Exceptions.ps1' destination=''/>
+    <file source='module.psm1' destination='${PLASTER_PARAM_ModuleName}.psm1'/>
+    <newModuleManifest 
+    destination='${PLASTER_PARAM_ModuleName}.psd1' 
+    moduleVersion='$PLASTER_PARAM_Version' 
+    rootModule='${PLASTER_PARAM_ModuleName}.psm1' 
+    author='$PLASTER_PARAM_FullName' 
+    description='$PLASTER_PARAM_ModuleDesc' 
+    encoding='UTF8-NoBOM'/>
+  </content>
+</plasterManifest>
