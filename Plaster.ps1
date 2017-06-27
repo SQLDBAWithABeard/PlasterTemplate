@@ -23,7 +23,9 @@ $plaster = @{
     GitHubRepo = "NewModule"
 }
 
-New-Item -ItemType Directory -Path $plaster.DestinationPath
+If (!(Test-Path $plaster.DestinationPath)) {
+    New-Item -ItemType Directory -Path $plaster.DestinationPath
+}
 Invoke-Plaster @plaster -Verbose
 
 <#
