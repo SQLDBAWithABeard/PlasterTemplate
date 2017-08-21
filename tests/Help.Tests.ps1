@@ -27,6 +27,10 @@ $parsedVersion = $null
 if ([System.Version]::TryParse($leaf, [ref]$parsedVersion)) {
     $ModuleName = Split-Path $parent -Leaf
 }
+# for VSTS build agent
+elseif ($leaf -eq 's') {
+    $ModuleName = $Env:Build_Repository_Name.Split('/')[1]
+}
 else {
     $ModuleName = $leaf
 }
