@@ -40,6 +40,7 @@
     <templateFile source='tests\Regression.Tests.ps1' destination=''/>
     <templateFile source='tests\Unit.Tests.ps1' destination=''/>
     <templateFile source='tests\Help.Exceptions.ps1' destination=''/>
+    <templateFile source='docs\ReleaseNotes.txt' destination=''/>
     <file source='module.psm1' destination='${PLASTER_PARAM_ModuleName}.psm1'/>
     <newModuleManifest 
     destination='${PLASTER_PARAM_ModuleName}.psd1' 
