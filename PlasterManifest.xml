@@ -42,6 +42,9 @@
     <templateFile source='tests\Help.Exceptions.ps1' destination=''/>
     <templateFile source='docs\ReleaseNotes.txt' destination=''/>
     <file source='module.psm1' destination='${PLASTER_PARAM_ModuleName}.psm1'/>
+     <message>
+    Creating Module Manifest
+    </message>
     <newModuleManifest 
     destination='${PLASTER_PARAM_ModuleName}.psd1' 
     moduleVersion='$PLASTER_PARAM_Version' 
