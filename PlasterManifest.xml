@@ -19,7 +19,7 @@
     <parameter name="GitHubRepo" type="text" prompt="Github repo name for this module" default="${PLASTER_PARAM_ModuleName}"/>
 </parameters>
   <content>
-      <message>
+    <message>
     Creating folder structure
     </message>
     <file source='' destination='docs'/>
