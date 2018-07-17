@@ -30,7 +30,7 @@
     Deploying common files
     </message>
     <file source='appveyor.yml' destination=''/>
-    <file source='contributing.md' destination=''/>
+    <templateFile source='contributing.md' destination=''/>
     <file source='LICENSE.txt'  destination=''/>
     <templateFile source='install.md'   destination=''/>
     <templateFile source='readme.md'   destination=''/>
